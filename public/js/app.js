@@ -1,0 +1,13 @@
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+$('.toast')&&setTimeout(()=>$('.toast').remove(),2500);
+$$('.bar i[data-w]').forEach(i=>requestAnimationFrame(()=>i.style.width=i.dataset.w+'%'));
+$$('.eye').forEach(b=>b.onclick=()=>{const i=b.previousElementSibling;i.type=i.type==='password'?'text':'password'});
+const apply=()=>{const p=localStorage.getItem('miao_collapsed');document.body.classList.toggle('collapsed',p===null?innerWidth<=1024:p==='1')};apply();
+$('#dots')?.addEventListener('click',()=>{if(innerWidth<=768)document.body.classList.toggle('open');else{localStorage.setItem('miao_collapsed',document.body.classList.contains('collapsed')?'0':'1');apply()}});
+$('#shade')?.addEventListener('click',()=>document.body.classList.remove('open'));
+$('#bell')?.addEventListener('click',()=>{$('#notif').hidden=!$('#notif').hidden});
+document.addEventListener('click',e=>{const b=e.target.closest('.more>button');$$('.menu').forEach(m=>{if(!b||m.previousElementSibling!==b)m.hidden=true});if(b)b.nextElementSibling.hidden=!b.nextElementSibling.hidden;
+ if(!e.target.closest('.bellwrap')&&$('#notif'))$('#notif').hidden=true;
+ const o=e.target.closest('[data-open]');if(o)document.getElementById(o.dataset.open).showModal();
+ const c=e.target.closest('[data-close]');if(c)c.closest('dialog').close()});
+$$('[data-confirm]').forEach(f=>f.addEventListener('submit',e=>{if(!confirm(f.dataset.confirm))e.preventDefault()}));

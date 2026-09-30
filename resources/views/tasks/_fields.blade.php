@@ -1,0 +1,6 @@
+@php $g=fn($k,$d='')=>old($k,$t?->$k ?? $d); @endphp
+<div><label for="title">Task Title</label><input class="in" id="title" name="task_title" maxlength="150" placeholder="What are you working on?" value="{{ $g('task_title') }}">@error('task_title')<p class="err">{{ $message }}</p>@enderror</div>
+<div><label for="desc">Description</label><textarea class="in" id="desc" name="task_description" placeholder="Add a short description...">{{ $g('task_description') }}</textarea></div>
+<div class="f2"><div><label for="cat">Category</label><select class="in" id="cat" name="task_category">@foreach(['Academic','Personal','Work','Other'] as $c)<option @selected($g('task_category','Academic')===$c)>{{ $c }}</option>@endforeach</select></div>
+<div><label for="pri">Priority</label><select class="in" id="pri" name="task_priority">@foreach(['Low','Medium','High'] as $c)<option @selected($g('task_priority','Medium')===$c)>{{ $c }}</option>@endforeach</select></div></div>
+<div><label for="dl">Deadline</label><input class="in" type="date" id="dl" name="task_deadline" value="{{ old('task_deadline',$t?->task_deadline?->format('Y-m-d')) }}">@error('task_deadline')<p class="err">{{ $message }}</p>@enderror</div>
