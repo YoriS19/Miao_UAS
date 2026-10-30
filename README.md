@@ -5,12 +5,12 @@
 
 Aplikasi untuk mencatat tugas, memecahnya jadi langkah kecil, dan tetap fokus.
 
-## ✨ Fitur
+## ✨ Fiture
 - 📝 Tulis tugas
 - 🪴 Pecah jadi langkah kecil
 - 🎯 Tetap fokus
 
-## 🛠️ Teknologi
+## 🛠️ Tech Stack
 PHP
 
 # Miáo (Laravel + Blade + MySQL)
