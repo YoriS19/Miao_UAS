@@ -1,3 +1,18 @@
+<img src="https://raw.githubusercontent.com/YoriS19/YoriS19/main/assets/banner-miao-uas.svg" width="100%" alt="Miao UAS"/>
+
+# 🐱 Miáo
+**Write it. Break it down. Stay focused.**
+
+Aplikasi untuk mencatat tugas, memecahnya jadi langkah kecil, dan tetap fokus.
+
+## ✨ Fitur
+- 📝 Tulis tugas
+- 🪴 Pecah jadi langkah kecil
+- 🎯 Tetap fokus
+
+## 🛠️ Teknologi
+PHP
+
 # Miáo (Laravel + Blade + MySQL)
 
 1. Buat folder kosong `Miao_UAS`, buka terminal di dalamnya, jalankan: `composer create-project laravel/laravel .`
